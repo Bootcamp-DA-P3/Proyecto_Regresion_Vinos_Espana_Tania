@@ -63,14 +63,20 @@ Proyecto de regresión con *Machine Learning* para estimar el **precio (€)** d
 ## 🗂️ Estructura del repositorio
 
 ```
+├── Dashboard/
+│   └── Vinos_Espana.pbix           # Dashboars en PowerBi
 ├── app/
 │   └── app.py                      # Aplicación Streamlit
+├── data/
+│   └── wines_SPA.csv               # Dataset
+├── informes/
+│   └── Informe_Ejecutivo.ipynb     # Informe de rendimiento del modelo
 ├── models/
 │   ├── modelo_final_vinos.pkl      # Modelo entrenado
 │   ├── columnas_modelo.pkl         # Columnas de entrenamiento (para replicar get_dummies)
 │   └── categorias.pkl              # Regiones y tipos válidos para la app
-├── 01_eda_y_modelado_v2.ipynb      # EDA, modelado, evaluación y exportación
-├── Informe_Ejecutivo.ipynb         # Informe de rendimiento del modelo
+├── notebooks
+│   ├── 01_eda_y_modelado_v2.ipynb  # EDA, modelado, evaluación y exportación
 ├── requirements.txt                # Dependencias (en la raíz, para Streamlit Cloud)
 └── README.md
 ```
@@ -102,7 +108,6 @@ streamlit run app/app.py
 - Evaluar la transformación logarítmica del precio por tramos (reduce el MAE en Test, pero empeora R² y RMSE globales).
 - Incorporar variables de reputación: interacción `bodega` × `region` o *target encoding* de `bodega`.
 - Agrupar categorías poco frecuentes de `region` y `tipo` en "Otras".
-- Probar *Gradient Boosting* (XGBoost / LightGBM) con regularización.
 - Mostrar un rango de confianza en la app (dispersión entre los árboles del bosque).
 
 ## 🛠️ Tecnologías
