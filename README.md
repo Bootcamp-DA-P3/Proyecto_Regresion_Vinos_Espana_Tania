@@ -12,6 +12,7 @@ Proyecto de regresión con *Machine Learning* para estimar el **precio (€)** d
 - **Dataset:** [Spanish Wine Quality Dataset](https://www.kaggle.com/datasets/fedesoriano/spanish-wine-quality-dataset) (Kaggle). Tras eliminar nulos en las variables clave quedan 6.331 vinos (se pierde ≈ 16 % de las filas).
 - **Objetivo:** predecir `precio` a partir de `puntuacion`, `num_reseñas`, `cuerpo`, `acidez`, `region` y `tipo`.
 - **Modelo final:** Random Forest Regressor optimizado con GridSearchCV (5 folds).
+- **Dashboard:** panel en Power BI incluido en Dashboard/Vinos_Espana.pbix.
 - **Hiperparámetros óptimos:** `n_estimators=150`, `max_depth=10`, `max_features=0.5`, `min_samples_leaf=10`, `min_samples_split=15`.
 
 ## 📊 Resultados del modelo final
@@ -64,7 +65,7 @@ Proyecto de regresión con *Machine Learning* para estimar el **precio (€)** d
 
 ```
 ├── Dashboard/
-│   └── Vinos_Espana.pbix           # Dashboars en PowerBi
+│   └── Vinos_Espana.pbix           # Dashboard en Power BI
 ├── app/
 │   └── app.py                      # Aplicación Streamlit
 ├── data/
@@ -75,8 +76,8 @@ Proyecto de regresión con *Machine Learning* para estimar el **precio (€)** d
 │   ├── modelo_final_vinos.pkl      # Modelo entrenado
 │   ├── columnas_modelo.pkl         # Columnas de entrenamiento (para replicar get_dummies)
 │   └── categorias.pkl              # Regiones y tipos válidos para la app
-├── notebooks
-│   ├── 01_eda_y_modelado_v2.ipynb  # EDA, modelado, evaluación y exportación
+├── notebooks/
+│   └── 01_eda_y_modelado_v2.ipynb  # EDA, modelado, evaluación y exportación
 ├── requirements.txt                # Dependencias (en la raíz, para Streamlit Cloud)
 └── README.md
 ```
@@ -105,15 +106,15 @@ streamlit run app/app.py
 
 ## 🔮 Próximos pasos
 
-- Evaluar la transformación logarítmica del precio por tramos (reduce el MAE en Test, pero empeora R² y RMSE globales).
+- Evaluar la transformación logarítmica del precio, comprobando su efecto por tramo de precio.
 - Incorporar variables de reputación: interacción `bodega` × `region` o *target encoding* de `bodega`.
 - Agrupar categorías poco frecuentes de `region` y `tipo` en "Otras".
 - Mostrar un rango de confianza en la app (dispersión entre los árboles del bosque).
 
 ## 🛠️ Tecnologías
 
-Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · joblib · Streamlit
+Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · joblib · Streamlit · Power BI   
 
 ## 👩‍💻 Autora
 
-Tania — Noviembre 2026
+Tania Soto — Noviembre 2026
