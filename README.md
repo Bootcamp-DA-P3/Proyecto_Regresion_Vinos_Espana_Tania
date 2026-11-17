@@ -2,7 +2,8 @@
 
 Proyecto de regresión con *Machine Learning* para estimar el **precio (€)** de un vino español a partir de sus características. Incluye análisis exploratorio, comparación de modelos, informe ejecutivo y una **aplicación web interactiva** desplegada con Streamlit.
 
-**🔗 Aplicación:** [Abrir la app](https://proyectoregresionvinosespanatania-afkyeygsiqmybcoydvxxmg.streamlit.app/)  
+**🔗 Aplicación:** [Abrir la app](https://proyectoregresionvinosespanatania-g44wymgacdjpy4aifzukbq.streamlit.app/) 
+
 **💻 Código:** [Repositorio en GitHub](https://github.com/Bootcamp-DA-P3/Proyecto_Regresion_Vinos_Espana_Tania)
 
 ---
@@ -95,7 +96,7 @@ streamlit run app/app.py
 
 - **Main file path:** `app/app.py`
 - **Python:** 3.12 (se elige al crear la app, en *Advanced settings*).
-- `requirements.txt` en la raíz, con las **mismas versiones** que se usaron para entrenar. En especial `scikit-learn`, ya que el `.pkl` debe cargarse con la versión que lo generó.
+- `requirements.txt` en la raíz, con versiones fijadas. El modelo se entrenó con `scikit-learn` 1.6.1 y se verificó que produce las mismas predicciones con la versión desplegada (1.9.1). Si reentrenas, conviene alinear ambas versiones.
 
 ## 🔁 Reentrenar el modelo
 
