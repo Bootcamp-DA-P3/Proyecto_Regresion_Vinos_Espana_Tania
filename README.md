@@ -2,7 +2,7 @@
 
 Proyecto de regresión con *Machine Learning* para estimar el **precio (€)** de un vino español a partir de sus características. Incluye análisis exploratorio, comparación de modelos, informe ejecutivo y una **aplicación web interactiva** desplegada con Streamlit.
 
-**🔗 Aplicación:** [Abrir la app](https://proyectoregresionvinosespanatania-afkyeygsiqmybcoydvxxmg.streamlit.app/)  
+**🔗 Aplicación:** [Abrir la app](https://proyectoregresionvinosespanatania-g44wymgacdjpy4aifzukbq.streamlit.app/).
 **💻 Código:** [Repositorio en GitHub](https://github.com/Bootcamp-DA-P3/Proyecto_Regresion_Vinos_Espana_Tania)
 
 ---
